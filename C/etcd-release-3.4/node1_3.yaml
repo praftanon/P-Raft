@@ -1,0 +1,12 @@
+name: node3
+data-dir: /tmp/etcd3
+
+listen-peer-urls: http://192.168.0.38:4380
+listen-client-urls: http://192.168.0.38:4379
+
+initial-advertise-peer-urls: http://192.168.0.38:4380
+advertise-client-urls: http://192.168.0.38:4379
+
+initial-cluster: node1=http://192.168.0.38:2380,node2=http://192.168.0.38:3380,node3=http://192.168.0.38:4380,node4=http://192.168.0.82:2380,node5=http://192.168.0.82:3380,node6=http://192.168.0.82:4380,node7=http://192.168.0.223:2380,node8=http://192.168.0.223:3380,node9=http://192.168.0.223:4380
+initial-cluster-token: local-etcd-cluster
+initial-cluster-state: new

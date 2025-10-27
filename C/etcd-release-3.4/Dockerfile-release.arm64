@@ -1,0 +1,12 @@
+FROM --platform=linux/arm64 gcr.io/distroless/static-debian11@sha256:1dbe426d60caed5d19597532a2d74c8056cd7b1674042b88f7328690b5ead8ed
+
+ADD etcd /usr/local/bin/
+ADD etcdctl /usr/local/bin/
+
+WORKDIR /var/etcd/
+WORKDIR /var/lib/etcd/
+
+EXPOSE 2379 2380
+
+# Define default command.
+CMD ["/usr/local/bin/etcd"]
